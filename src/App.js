@@ -1,11 +1,9 @@
 import { useState } from 'react';
+import './App.css';
 
 function App(){
   const [input, setInput] = useState('');
-  const [tarefas, setTarefas] = useState([
-    'Pagar a conta de luz',
-    'Estudar React JS'
-  ]);
+  const [tarefas, setTarefas] = useState([]);
 
   function handleRegister(e){
     e.preventDefault();
@@ -14,10 +12,9 @@ function App(){
   }
 
   return(
-    <div>
-      <h1>Cadastrando usuario</h1>
+    <div class="container">
       <form onSubmit={handleRegister}>
-        <label>Nome da tarefa:</label><br/>
+        <label><h1>Lista de tarefa</h1></label><br/>
         <input 
           placeholder="Digite uma tarefa" 
           value={input}
